@@ -13,7 +13,8 @@ def bubble_sort(num_list)
   begin
     flag = 0
     i = 0
-    while i < Repeat-1 do
+    k = 0
+    while i < Repeat-1-k do
       if num_list[i] > num_list[i+1]
         flag = 1
         j = num_list[i]
