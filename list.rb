@@ -26,7 +26,7 @@ class MyListEntry
     @data = data_info
   end
 
-  # Append after new_list entry
+  # Append new_entry
   def append(new_entry)
     tmp_entry = nil
     tmp_entry = self.next if self.next
@@ -38,7 +38,7 @@ class MyListEntry
     end
   end
 
-  # Prepend before new_list entry
+  # Prepend new_entry
   def prepend(new_entry)
     tmp_entry = nil
     tmp_entry = self.prev if self.prev
@@ -125,7 +125,7 @@ puts "Delete entry 3"
 entry.delete
 
 entry = top_entry
-puts "After Deelete"
+puts "After Delete"
 while(entry)
   puts "Data = " + entry.data.to_s
   entry = entry.next
