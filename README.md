@@ -9,3 +9,4 @@ Algorithm code on ruby.
 * merge_sort.rb   Merge sort
 * linear_search.rb   Linear search
 * binary_search.rb   Binary search
+* list.rb  Link list data structure code
