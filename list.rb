@@ -5,14 +5,14 @@
 # Go Hosohara  go.hosohara@gmail.com
 #
 
-class MyList
+class MyListEntry
   attr_reader: data
   attr_writer: data
 
   # Previous link list entry
-  @prev_list = nil
+  @prev_entry = nil
   # Next link list entry
-  @next_list = nil
+  @next_entry = nil
   # Data(Integer)
   @data = nil
 
@@ -21,7 +21,11 @@ class MyList
   end
 
   def append(new_list)
-    
+    tmp_entry = nil
+    tmp_entry = self.next_list if self.next_list
+    self.next_list = new_list
+    new_list.prev_entry = self
+    new_list.next_entry = tmp_entry if tmp_entry
   end
 
   def prepend(new_list)
@@ -31,5 +35,6 @@ class MyList
   def delete
 
   end
-
 end
+
+#main
