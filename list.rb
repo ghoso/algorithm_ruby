@@ -105,3 +105,28 @@ while(entry)
   puts "Data = " + entry.data.to_s
   entry = entry.next
 end
+
+
+#
+# Delete test
+#
+entry = top_entry
+puts "Before Delete"
+while(entry)
+  puts "Data = " + entry.data.to_s
+  entry = entry.next
+end
+
+entry = top_entry
+entry = entry.next
+entry = entry.next
+
+puts "Delete entry 3"
+entry.delete
+
+entry = top_entry
+puts "After Deelete"
+while(entry)
+  puts "Data = " + entry.data.to_s
+  entry = entry.next
+end
