@@ -62,7 +62,6 @@ end
 #main
 #
 a = [1,2,3,4,5]
-b = [6,7,8,9,10]
 prev_entry = nil
 top_entry = nil
 first_flag = false
@@ -81,6 +80,27 @@ a.each{|num|
 }
 
 entry = top_entry
+puts "Append"
+while(entry)
+  puts "Data = " + entry.data.to_s
+  entry = entry.next
+end
+
+#
+# Prepend test
+#
+prev_entry = nil
+a.each{|num|
+  link_entry = MyListEntry.new(num)
+  first_flag = true
+  if prev_entry
+    prev_entry.prepend(link_entry)
+  end
+  prev_entry = link_entry
+}
+
+entry = prev_entry
+puts "Prepend"
 while(entry)
   puts "Data = " + entry.data.to_s
   entry = entry.next
